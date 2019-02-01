@@ -33,7 +33,7 @@ public class TelaProd extends javax.swing.JInternalFrame {
     }
     
     private void pesquisa_produto() {
-        String sql = "select * from tbprod where codigoProduto like ?";
+        String sql = "select * from tbmaterial where codigoProduto like ?";
         try {
             pst = conexao.prepareStatement(sql);
             pst.setString(1, txtPesquisar.getText() + "%");
